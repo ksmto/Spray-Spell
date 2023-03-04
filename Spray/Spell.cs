@@ -23,6 +23,7 @@ public class Spell : SpellCastCharge {
                                  itemThrowForce,
                                  ForceMode.VelocityChange);
                 item.Despawn(itemDespawnTimer);
+                item.IgnoreRagdollCollision(Player.currentCreature.ragdoll);
             });
             yield return new WaitForSeconds(spawnDelay);
         }
